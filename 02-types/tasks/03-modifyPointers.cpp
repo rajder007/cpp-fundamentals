@@ -4,6 +4,13 @@
 // foo() should modify value under passed pointer to 10
 // bar() should modify value under passed pointer to 20
 // Can we have a pointer to const or a const pointer?
+void foo(int * const pointer) {
+    *pointer=10;
+}
+
+void bar(int * const pointer) {
+    *pointer=20;
+}
 
 int main() {
     int number = 5;
@@ -16,3 +23,4 @@ int main() {
 
     return 0;
 }
+
